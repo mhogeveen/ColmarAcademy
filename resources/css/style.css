@@ -4,12 +4,14 @@ html {
 
 }
 
-/* Styles applied to header */
+/* Styles applied to header section */
 
 #header-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  z-index: 10;
   width: 100%;
   height: 64px;
   background-color: lightblue;
@@ -27,4 +29,32 @@ html {
   padding-left: 16px;
 }
 
-/* Styles applied to */
+/* Styles applied to banner section */
+
+#banner-section {
+  display: flex;
+  position: absolute;
+  top: 64px;
+  width: 100%;
+  background-color: lightgrey;
+}
+
+#banner-section .container {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  padding: 32px 24px;
+}
+
+#banner-section img {
+  max-width: 60%;
+  height: auto;
+}
+
+#banner-section .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  padding-left: 24px;
+}
