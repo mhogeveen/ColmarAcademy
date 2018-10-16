@@ -1,0 +1,30 @@
+/* Styles applied to whole document */
+
+html {
+
+}
+
+/* Styles applied to header */
+
+#header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 64px;
+  background-color: lightblue;
+}
+
+#header-section .logo,
+#header-section .nav {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 24px;
+}
+
+.nav a {
+  padding-left: 16px;
+}
+
+/* Styles applied to */
