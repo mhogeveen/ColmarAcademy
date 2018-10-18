@@ -36,33 +36,49 @@ html {
   position: relative;
   top: 64px;
   width: 100%;
-  background-color: lightgrey;
 }
 
-#banner-section .container {
+#banner-section .container-lrg {
   display: flex;
-  align-items: flex-start;
-  width: 100%;
-  padding: 32px 0;
-}
-
-#banner-section .image {
   width: 60%;
-  padding: 0 24px;
+  background-color: blue;
 }
 
-#banner-section img {
+.container-lrg .image {
+  width: 100%;
+  padding: 32px 24px;
+}
+
+.image img {
   max-width: 100%;
   height: auto;
 }
 
-#banner-section .tekst {
+#banner-section .container-sml {
+  width: 40%;
+  background-color: red;
+}
+
+.container-sml .info {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  width: 40%;
-  height: 100%;
+  flex: 1;
+  width: 100%;
+  padding: 32px 16px;
 }
+
+.info h1 {
+  width: 100%;
+}
+
+.info h2 {
+  width: 100%;
+}
+
+.info button {
+  width: 100%;
+}
+
 
 /* Styles applied to news section */
 
@@ -73,16 +89,14 @@ html {
   width: 100%;
 }
 
-#news-section .article {
+#news-section .container-lrg {
   display: flex;
   width: 60%;
-  flex-grow: 1;
-  border-right: 1px solid lightgrey;
+  background-color: red;
 }
 
-.article .container {
-  display: flex;
-  flex-direction: column;
+.container-lrg .article {
+  width: 100%;
   padding: 32px 24px;
 }
 
@@ -95,7 +109,6 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  flex: 1;
 }
 
 .article .tekst h1 {
@@ -110,40 +123,7 @@ html {
   margin-top: auto;
 }
 
-#news-section .snippets {
-  display: flex;
-  flex-direction: column;
+#news-section .container-sml {
   width: 40%;
-  padding-top: 16px;
-}
-
-.snippets .container {
-  display: flex;
-  align-items: flex-start;
-  width: 100%;
-  padding: 16px;
-}
-
-.snippets .container:nth-child(0n + 2) {
-  border-top: 1px solid lightgrey;
-  border-bottom: 1px solid lightgrey;
-}
-
-.snippets img {
-  max-width: 35%;
-  height: auto;
-}
-
-.snippets .tekst {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  flex: 1;
-  width: 65%;
-  margin: auto 0;
-  padding: 0 16px;
-}
-
-.snippets .tekst p {
-  padding: 8px 0;
+  background-color: blue;
 }
