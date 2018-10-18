@@ -39,7 +39,7 @@ html {
   width: 100%;
 }
 
-#banner-section .container-lrg {
+#banner-section .container-mdm {
   display: flex;
   width: 60%;
   background-color: blue;
@@ -95,7 +95,7 @@ html {
   width: 100%;
 }
 
-#news-section .container-lrg {
+#news-section .container-mdm {
   display: flex;
   width: 60%;
   background-color: red;
@@ -171,4 +171,64 @@ html {
 
 .snippet .tekst span {
 
+}
+
+/* Style applied to courses section */
+
+#courses-section {
+  position: relative;
+  top: 64px;
+  width: 100%;
+}
+
+#courses-section .container-lrg {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 72px;
+}
+
+.container-lrg h1 {
+  text-align: center;
+}
+
+.courses {
+  display: flex;
+  flex-direction: column;
+}
+
+.courses-row {
+  display: flex;
+  width: 100%;
+  padding: 32px 0 0 0;
+}
+
+.course {
+  display: flex;
+  flex-direction: column;
+  width: 33.33%;
+  background: lightblue;
+}
+
+.course:nth-child(0n + 2) {
+  margin: auto 32px;
+}
+
+.course img {
+  width: 100%;
+  height: auto;
+}
+
+.course .tekst {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 16px 24px 16px;
+}
+
+.course .tekst h1 {
+  text-align: left;
+  padding: 0;
+}
+
+.course .tekst span {
+  padding: 8px 0;
 }
