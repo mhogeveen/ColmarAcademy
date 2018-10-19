@@ -3,7 +3,15 @@
 html {
   font-size: 16px;
   font-family: "Montserrat";
-  color: ;
+  color: #191a1d;
+}
+
+body {
+  background-color: #f1f0e2;
+}
+
+img {
+  border-radius: 10px;
 }
 
 /* Styles applied to header section */
@@ -58,11 +66,12 @@ html {
   font-weight: 600;
   font-size: 0.75rem;
   background-color: inherit;
-  transition: background-color 400ms linear;
+  transition: background-color 400ms linear, color 400ms linear;
 }
 
 .nav a:hover {
   background-color: #f25652;
+  color: #f1f0e2;
 }
 
 /* Styles applied to banner section */
@@ -106,7 +115,7 @@ html {
   width: 100%;
   font-size: 2rem;
   font-weight: 900;
-  color: ;
+  color: #3e4e59;
 }
 
 .info h2 {
@@ -114,24 +123,23 @@ html {
   padding: 24px 0;
 }
 
-.info span {
+.info button {
   text-align: center;
   font-weight: 600;
-  padding: 0.5rem 2rem;
-  background-color: #d9bb93;
-  transition: background-color 400ms linear;
-}
-
-.info span:hover {
-  background-color: #f25652;
-}
-
-.info span a {
+  padding: 0.5rem 0;
+  width: 60%;
+  border: none;
+  border-radius: 10px;
   color: #3e4e59;
-  text-decoration: none;
-  padding: 0.5rem 3rem;
+  background-color: #d9bb93;
+  outline: none;
+  transition: background-color 400ms linear, color 400ms linear;
 }
 
+.info button:hover {
+  background-color: #f25652;
+  color: #f1f0e2;
+}
 
 /* Styles applied to news section */
 
@@ -140,6 +148,7 @@ html {
   position: relative;
   top: 64px;
   width: 100%;
+  background-color: #c2e7f2;
 }
 
 #news-section .container-mdm {
@@ -167,7 +176,7 @@ html {
   padding: 32px 0 24px 0;
   font-size: 2rem;
   font-weight: 900;
-  color: ;
+  color: #3e4e59;
 }
 
 .article .tekst p {
@@ -213,17 +222,28 @@ html {
 .snippet .tekst h1 {
   font-size: 1.1rem;
   font-weight: 800;
-  color: ;
+  color: #3e4e59;
 }
 
 .snippet .tekst p {
-  padding: 8px 0;
+  padding: 8px 0 16px 0;
   font-size: 0.85rem;
 }
 
 .snippet .tekst span a {
   font-size: 0.85rem;
+  font-weight: 600;
+  color: #3e4e59;
+  background-color: #d9bb93;
+  border-radius: 10px;
+  padding: 0.5rem;
   text-decoration: none;
+  transition: background-color 400ms linear, color 400ms linear;
+}
+
+.snippet .tekst span a:hover {
+  color: #f1f0e2;
+  background-color: #f25652;
 }
 
 /* Style applied to courses section */
@@ -244,7 +264,7 @@ html {
   text-align: center;
   font-size: 2rem;
   font-weight: 900;
-  color: ;
+  color: #3e4e59;
 }
 
 .courses {
@@ -262,6 +282,8 @@ html {
   display: flex;
   flex-direction: column;
   width: 33.33%;
+  background-color: #c2e7f2;
+  border-radius: 10px;
 }
 
 .course:nth-child(0n + 2) {
@@ -284,15 +306,16 @@ html {
   padding: 0;
   font-size: 1.5rem;
   font-weight: 800;
-  color: ;
+  color: #3e4e59;
 }
 
 .course .tekst span {
   padding: 8px 0;
+  font-size: 0.75rem;
 }
 
 .course .tekst p {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /* Styles applied to thesis section */
@@ -303,6 +326,7 @@ html {
   position: relative;
   top: 64px;
   width: 100%;
+  background-color: #c2e7f2;
 }
 
 #thesis-section .title {
@@ -310,7 +334,7 @@ html {
   padding: 32px 0;
   font-size: 2rem;
   font-weight: 900;
-  color: ;
+  color: #3e4e59;
 }
 #thesis-section .container-lrg {
   display: flex;
@@ -331,7 +355,7 @@ html {
   padding: 24px 0 8px 0;
   font-size: 2rem;
   font-weight: 900;
-  color: ;
+  color: #3e4e59;
 }
 
 #thesis-section .container-sml {
@@ -345,11 +369,13 @@ html {
   justify-content: space-between;
   position: relative;
   top: 64px;
+  background-color: #d9bb93;
 }
 
 #footer-section span {
   padding: 16px 0 32px 24px;
   font-size: 0.8rem;
+  color: #f1f0e2;
 }
 
 .bottom-nav {
@@ -360,4 +386,5 @@ html {
   padding: 0 16px 0 0;
   font-size: 0.8rem;
   text-decoration: none;
+  color: #f1f0e2;
 }
