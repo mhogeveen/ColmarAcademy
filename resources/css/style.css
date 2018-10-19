@@ -7,11 +7,16 @@ html {
 }
 
 body {
-  background-color: #f1f0e2;
+  background-color: #cdd4ca;
 }
 
 img {
   border-radius: 10px;
+}
+
+video {
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Styles applied to header section */
@@ -24,7 +29,8 @@ img {
   z-index: 10;
   width: 100%;
   height: 64px;
-  background-color: #d9bb93;
+  background-color: #153e5c;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
 #header-section .logo,
@@ -45,7 +51,7 @@ img {
 .logo-word1 {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #f1f0e2;
+  color: #fff;
   position: relative;
   bottom: 0.75rem;
 }
@@ -53,7 +59,7 @@ img {
 .logo-word2 {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #f1f0e2;
+  color: #fff;
   position: relative;
   top: 0.75rem;
   right: 3rem;
@@ -62,16 +68,16 @@ img {
 .nav a {
   padding: 1.625rem 8px;
   text-decoration: none;
-  color: #3e4e59;
+  color: #fff;
   font-weight: 600;
   font-size: 0.75rem;
   background-color: inherit;
-  transition: background-color 400ms linear, color 400ms linear;
+  transition: background-color 400ms linear/*, color 400ms linear*/;
 }
 
 .nav a:hover {
-  background-color: #f25652;
-  color: #f1f0e2;
+  background-color: #f2be54;
+  color: ;
 }
 
 /* Styles applied to banner section */
@@ -97,6 +103,7 @@ img {
 .image img {
   max-width: 100%;
   height: auto;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
 #banner-section .container-sml {
@@ -115,7 +122,7 @@ img {
   width: 100%;
   font-size: 2rem;
   font-weight: 900;
-  color: #3e4e59;
+  color: #153e5c;
 }
 
 .info h2 {
@@ -130,15 +137,15 @@ img {
   width: 60%;
   border: none;
   border-radius: 10px;
-  color: #3e4e59;
-  background-color: #d9bb93;
+  color: #fff;
+  background-color: #f2be54;
   outline: none;
   transition: background-color 400ms linear, color 400ms linear;
 }
 
 .info button:hover {
-  background-color: #f25652;
-  color: #f1f0e2;
+  background-color: ;
+  color: #153e5c;
 }
 
 /* Styles applied to news section */
@@ -148,7 +155,7 @@ img {
   position: relative;
   top: 64px;
   width: 100%;
-  background-color: #c2e7f2;
+  background-color: #87aeb4;
 }
 
 #news-section .container-mdm {
@@ -164,6 +171,7 @@ img {
 .article img {
   max-width: 100%;
   height: auto;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
 .article .tekst {
@@ -176,11 +184,7 @@ img {
   padding: 32px 0 24px 0;
   font-size: 2rem;
   font-weight: 900;
-  color: #3e4e59;
-}
-
-.article .tekst p {
-
+  color: #153e5c;
 }
 
 .article .tekst span {
@@ -204,7 +208,11 @@ img {
   align-items: flex-start;
   align-items: center;
   width: 100%;
-  padding: 16px 0;
+  padding: ;
+  margin: 16px 0;
+  background-color: #f1f0e2;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
 .snippet img {
@@ -222,7 +230,7 @@ img {
 .snippet .tekst h1 {
   font-size: 1.1rem;
   font-weight: 800;
-  color: #3e4e59;
+  color: #153e5c;
 }
 
 .snippet .tekst p {
@@ -233,8 +241,8 @@ img {
 .snippet .tekst span a {
   font-size: 0.85rem;
   font-weight: 600;
-  color: #3e4e59;
-  background-color: #d9bb93;
+  color: #fff;
+  background-color: #f2be54;
   border-radius: 10px;
   padding: 0.5rem;
   text-decoration: none;
@@ -242,8 +250,8 @@ img {
 }
 
 .snippet .tekst span a:hover {
-  color: #f1f0e2;
-  background-color: #f25652;
+  color: #153e5c;
+  background-color: ;
 }
 
 /* Style applied to courses section */
@@ -264,7 +272,7 @@ img {
   text-align: center;
   font-size: 2rem;
   font-weight: 900;
-  color: #3e4e59;
+  color: #153e5c;
 }
 
 .courses {
@@ -282,8 +290,9 @@ img {
   display: flex;
   flex-direction: column;
   width: 33.33%;
-  background-color: #c2e7f2;
+  background-color: #f1f0e2;
   border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
 .course:nth-child(0n + 2) {
@@ -306,7 +315,7 @@ img {
   padding: 0;
   font-size: 1.5rem;
   font-weight: 800;
-  color: #3e4e59;
+  color: #153e5c;
 }
 
 .course .tekst span {
@@ -326,7 +335,7 @@ img {
   position: relative;
   top: 64px;
   width: 100%;
-  background-color: #c2e7f2;
+  background-color: #87aeb4;
 }
 
 #thesis-section .title {
@@ -334,7 +343,7 @@ img {
   padding: 32px 0;
   font-size: 2rem;
   font-weight: 900;
-  color: #3e4e59;
+  color: #153e5c;
 }
 #thesis-section .container-lrg {
   display: flex;
@@ -355,7 +364,7 @@ img {
   padding: 24px 0 8px 0;
   font-size: 2rem;
   font-weight: 900;
-  color: #3e4e59;
+  color: #153e5c;
 }
 
 #thesis-section .container-sml {
@@ -369,13 +378,13 @@ img {
   justify-content: space-between;
   position: relative;
   top: 64px;
-  background-color: #d9bb93;
+  background-color: #153e5c;
 }
 
 #footer-section span {
   padding: 16px 0 32px 24px;
   font-size: 0.8rem;
-  color: #f1f0e2;
+  color: #fff;
 }
 
 .bottom-nav {
@@ -386,5 +395,5 @@ img {
   padding: 0 16px 0 0;
   font-size: 0.8rem;
   text-decoration: none;
-  color: #f1f0e2;
+  color: #fff;
 }
