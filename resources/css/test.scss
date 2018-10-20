@@ -1,0 +1,88 @@
+/* Declaring variables */
+
+$yellow: #f2be54;
+$light-grey: #cdd4ca;
+$light-blue: #87aeb4;
+$blue: #153e5c;
+$black: #191a1d;
+$cream: #f1f0e2;
+$white: #ffffff;
+
+/* Styles applied to whole document */
+
+html {
+  font-size: 16px;
+  font-family: "Montserrat";
+  color: $black;
+}
+
+body {
+  background-color: $light-grey;
+}
+
+img {
+  border-radius: 10px;
+}
+
+video {
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Styles applied to header section */
+
+#header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 64px;
+  background-color: $blue;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  .logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 24px;
+    img {
+      position: relative;
+      top: 0.2rem;
+      height: 4rem;
+    }
+    .logo-word1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: $white;
+      position: relative;
+      bottom: 0.75rem;
+    }
+    .logo-word2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: $white;
+      position: relative;
+      top: 0.75rem;
+      right: 3rem;
+    }
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 24px;
+    a {
+      padding: 1.625rem 8px;
+      text-decoration: none;
+      color: $white;
+      font-weight: 600;
+      font-size: 0.75rem;
+      background-color: inherit;
+      transition: background-color 400ms linear/*, color 400ms linear*/;
+    }
+    a:hover {
+      background-color: $yellow;
+    }
+  }
+}
