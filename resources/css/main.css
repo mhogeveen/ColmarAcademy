@@ -1,6 +1,11 @@
 /* Importing helper scss files */
 /* Declaring variables */
 /* Declaring mixins */
+/* Declaring placeholders */
+#banner-section, #news-section, #courses-section, #thesis-section, #footer-section {
+  position: relative;
+  top: 64px; }
+
 /* Importing section scss files */
 /* Styles applied to header section */
 #header-section {
@@ -12,6 +17,7 @@
   z-index: 10;
   width: 100%;
   height: 64px;
+  border-bottom: 1px solid #f2be54;
   background-color: #153e5c;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); }
   #header-section .logo {
@@ -46,11 +52,11 @@
     height: 100%;
     padding: 0 24px; }
     #header-section .nav a {
+      font-size: 0.75rem;
+      font-weight: 600;
       padding: 1.625rem 8px;
       text-decoration: none;
       color: #ffffff;
-      font-size: 0.75rem;
-      font-weight: 600;
       background-color: inherit;
       transition: background-color 400ms linear; }
       #header-section .nav a:hover {
@@ -62,8 +68,6 @@
   align-items: center;
   flex-direction: row;
   display: flex;
-  position: relative;
-  top: 64px;
   width: 100%; }
   #banner-section .container-mdm {
     justify-content: flex-start;
@@ -71,6 +75,9 @@
     flex-direction: row;
     display: flex;
     width: 60%; }
+    @media only screen and (max-width: 850px) {
+      #banner-section .container-mdm {
+        width: 50%; } }
     #banner-section .container-mdm .image {
       width: 100%;
       padding: 32px 24px; }
@@ -81,6 +88,9 @@
         border-bottom: 3px solid #f2be54; }
   #banner-section .container-sml {
     width: 40%; }
+    @media only screen and (max-width: 850px) {
+      #banner-section .container-sml {
+        width: 50%; } }
     #banner-section .container-sml .info {
       justify-content: space-around;
       align-items: stretch;
@@ -89,9 +99,9 @@
       max-width: 90%;
       padding: 32px 0 32px 16px; }
       #banner-section .container-sml .info h1 {
-        width: 100%;
         font-size: 2rem;
         font-weight: 900;
+        width: 100%;
         color: #153e5c; }
       #banner-section .container-sml .info h2 {
         width: 100%;
@@ -116,8 +126,6 @@
   align-items: stretch;
   flex-direction: row;
   display: flex;
-  position: relative;
-  top: 64px;
   width: 100%;
   background-color: #87aeb4; }
   #news-section .container-mdm {
@@ -126,6 +134,9 @@
     flex-direction: row;
     display: flex;
     width: 60%; }
+    @media only screen and (max-width: 850px) {
+      #news-section .container-mdm {
+        width: 50%; } }
     #news-section .container-mdm .article {
       width: 100%;
       padding: 32px 24px; }
@@ -140,15 +151,18 @@
         flex-direction: column;
         display: flex; }
         #news-section .container-mdm .article .tekst h1 {
-          padding: 32px 0 24px 0;
           font-size: 2rem;
           font-weight: 900;
+          padding: 32px 0 24px 0;
           color: #153e5c; }
         #news-section .container-mdm .article .tekst span {
           padding-top: 24px;
           font-size: 0.8rem; }
   #news-section .container-sml {
     width: 40%; }
+    @media only screen and (max-width: 850px) {
+      #news-section .container-sml {
+        width: 50%; } }
     #news-section .container-sml .snippets {
       justify-content: flex-start;
       align-items: stretch;
@@ -185,6 +199,9 @@
           #news-section .container-sml .snippets .snippet .tekst p {
             padding: 8px 0 16px 0;
             font-size: 0.85rem; }
+            @media only screen and (max-width: 900px) {
+              #news-section .container-sml .snippets .snippet .tekst p {
+                padding: 8px 0; } }
           #news-section .container-sml .snippets .snippet .tekst span a {
             font-size: 0.85rem;
             font-weight: 600;
@@ -196,11 +213,13 @@
             transition: background-color 400ms linear, color 400ms linear; }
             #news-section .container-sml .snippets .snippet .tekst span a:hover {
               color: #153e5c; }
+            @media only screen and (max-width: 900px) {
+              #news-section .container-sml .snippets .snippet .tekst span a {
+                padding: 0.25rem;
+                font-size: 0.7rem; } }
 
 /* Style applied to courses section */
 #courses-section {
-  position: relative;
-  top: 64px;
   width: 100%; }
   #courses-section .container-lrg {
     justify-content: flex-start;
@@ -208,6 +227,9 @@
     flex-direction: column;
     display: flex;
     padding: 32px 72px; }
+    @media only screen and (max-width: 850px) {
+      #courses-section .container-lrg {
+        padding: 32px; } }
     #courses-section .container-lrg .title {
       text-align: center;
       text-decoration: underline;
@@ -232,10 +254,10 @@
           align-items: stretch;
           flex-direction: column;
           display: flex;
-          width: 33.33%;
-          background-color: #f1f0e2;
           border-bottom: 3px solid #f2be54;
           border-radius: 10px;
+          width: 33.33%;
+          background-color: #f1f0e2;
           box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); }
           #courses-section .container-lrg .courses .courses-row .course:nth-child(0n + 2) {
             margin: auto 32px; }
@@ -250,10 +272,10 @@
             display: flex;
             padding: 16px 16px 24px 16px; }
             #courses-section .container-lrg .courses .courses-row .course .tekst h1 {
-              text-align: left;
-              padding: 0;
               font-size: 1.5rem;
               font-weight: 800;
+              text-align: left;
+              padding: 0;
               color: #153e5c; }
             #courses-section .container-lrg .courses .courses-row .course .tekst span {
               padding: 8px 0;
@@ -267,8 +289,6 @@
   align-items: stretch;
   flex-direction: column;
   display: flex;
-  position: relative;
-  top: 64px;
   width: 100%;
   background-color: #87aeb4; }
   #thesis-section .title {
@@ -279,6 +299,9 @@
     font-weight: 900;
     padding: 32px 0;
     color: #153e5c; }
+    @media only screen and (max-width: 850px) {
+      #thesis-section .title {
+        padding: 32px 0 0 0; } }
   #thesis-section .container-lrg {
     justify-content: flex-start;
     align-items: stretch;
@@ -291,6 +314,9 @@
     flex-direction: row;
     display: flex;
     width: 60%; }
+    @media only screen and (max-width: 850px) {
+      #thesis-section .container-mdm {
+        width: 50%; } }
     #thesis-section .container-mdm .article {
       width: 100%;
       padding: 32px 24px; }
@@ -303,12 +329,15 @@
         flex-direction: column;
         display: flex; }
         #thesis-section .container-mdm .article .tekst h1 {
-          padding: 24px 0 8px 0;
           font-size: 2rem;
           font-weight: 900;
+          padding: 24px 0 8px 0;
           color: #153e5c; }
   #thesis-section .container-sml {
     width: 40%; }
+    @media only screen and (max-width: 850px) {
+      #thesis-section .container-sml {
+        width: 50%; } }
     #thesis-section .container-sml .snippets {
       justify-content: flex-start;
       align-items: stretch;
@@ -321,11 +350,11 @@
         align-items: center;
         flex-direction: row;
         display: flex;
+        border-right: 3px solid #f2be54;
+        border-radius: 10px;
         width: 100%;
         margin: 16px 0;
         background-color: #f1f0e2;
-        border-right: 3px solid #f2be54;
-        border-radius: 10px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); }
         #thesis-section .container-sml .snippets .snippet img {
           max-width: 35%;
@@ -352,8 +381,6 @@
   align-items: stretch;
   flex-direction: row;
   display: flex;
-  position: relative;
-  top: 64px;
   background-color: #153e5c; }
   #footer-section span {
     padding: 16px 0 32px 24px;

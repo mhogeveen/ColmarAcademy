@@ -2,14 +2,21 @@
 
 #banner-section {
   @include flex-box(flex-start, center);
-  @include space-from-top(relative, 64px);
+  @extend %space-from-top;
   width: 100%;
+
   .container-mdm {
     @include flex-box(flex-start, stretch, row, flex);
     width: 60%;
+
+    @media only screen and (max-width: $breakpoint2) {
+      width: 50%;
+    }
+
     .image {
       width: 100%;
       padding: 32px 24px;
+
       img {
         max-width: 100%;
         height: auto;
@@ -18,24 +25,33 @@
       }
     }
   }
+
   .container-sml {
     width: 40%;
+
+    @media only screen and (max-width: $breakpoint2) {
+      width: 50%;
+    }
+
     .info {
       @include flex-box(space-around, stretch, column, flex);
       max-width: 90%;
       padding: 32px 0 32px 16px;
+
       h1 {
-        width: 100%;
         font : {
           size: 2rem;
           weight: 900;
         }
+        width: 100%;
         color: $blue;
       }
+
       h2 {
         width: 100%;
         padding: 24px 0;
       }
+
       button {
         text-align: center;
         font-weight: 600;
@@ -47,6 +63,7 @@
         background-color: $yellow;
         outline: none;
         transition: background-color 400ms linear, color 400ms linear;
+
         &:hover {
           color: $blue;
         }

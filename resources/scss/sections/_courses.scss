@@ -1,60 +1,77 @@
 /* Style applied to courses section */
 
 #courses-section {
-  @include space-from-top(relative, 64px);
+  @extend %space-from-top;
   width: 100%;
+
   .container-lrg {
     @include flex-box(flex-start, stretch, column, flex);
     padding: 32px 72px;
+
+    @media only screen and (max-width: $breakpoint2) {
+      padding: 32px;
+    }
+
     .title {
       text : {
         align: center;
         decoration: underline;
         decoration-color: $yellow;
       }
+
       font : {
         size: 2rem;
         weight: 900;
       }
       color: $blue;
     }
+
     .courses {
       @include flex-box(flex-start, stretch, column, flex);
+
       .courses-row {
         @include flex-box(flex-start, stretch, row, flex);
         width: 100%;
         padding: 32px 0 0 0;
+
         .course {
           @include flex-box(flex-start, stretch, column, flex);
+          border : {
+            bottom: $highlight-border;
+            radius: 10px;
+          }
           width: 33.33%;
           background-color: $cream;
-          border-bottom: $highlight-border;
-          border-radius: 10px;
           box-shadow: $standard-shadow;
           &:nth-child(0n + 2) {
             margin: auto 32px;
           }
+
           img {
             width: 100%;
             height: auto;
             border-bottom: $highlight-border;
           }
+
           .tekst {
             @include flex-box(flex-start, stretch, column, flex);
             padding: 16px 16px 24px 16px;
+
             h1 {
-              text-align: left;
-              padding: 0;
               font : {
                 size: 1.5rem;
                 weight: 800;
               }
+              text-align: left;
+              padding: 0;
               color: $blue;
             }
+
             span {
               padding: 8px 0;
               font-size: 0.75rem;
             }
+
             p {
               font-weight: 500;
             }

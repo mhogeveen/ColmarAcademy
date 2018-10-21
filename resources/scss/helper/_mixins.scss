@@ -6,8 +6,3 @@
   flex-direction: $flex-direction;
   display: $display;
 }
-
-@mixin space-from-top($position, $top) {
-  position: $position;
-  top: $top;
-}

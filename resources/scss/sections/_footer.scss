@@ -2,15 +2,18 @@
 
 #footer-section {
   @include flex-box(space-between, stretch, row, flex);
-  @include space-from-top(relative, 64px);
+  @extend %space-from-top;
   background-color: $blue;
+
   span {
     padding: 16px 0 32px 24px;
     font-size: 0.8rem;
     color: $white;
   }
+
   .bottom-nav {
     padding: 16px 0 32px 0;
+    
     a {
       padding: 0 16px 0 0;
       font-size: 0.8rem;

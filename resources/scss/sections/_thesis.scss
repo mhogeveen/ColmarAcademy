@@ -2,44 +2,60 @@
 
 #thesis-section {
   @include flex-box(flex-start, stretch, column, flex);
-  @include space-from-top(relative, 64px);
+  @extend %space-from-top;
   width: 100%;
   background-color: $light-blue;
+
   .title {
     text : {
       align: center;
       decoration: underline;
       decoration-color: $yellow;
     }
+
     font : {
       size: 2rem;
       weight: 900;
     }
     padding: 32px 0;
     color: $blue;
+
+    @media only screen and (max-width: $breakpoint2) {
+      padding: 32px 0 0 0;
+    }
   }
+
   .container-lrg {
     @include flex-box(flex-start, stretch, row, flex);
     width: 100%;
   }
+
   .container-mdm {
     @include flex-box(flex-start, stretch, row, flex);
     width: 60%;
+
+    @media only screen and (max-width: $breakpoint2) {
+      width: 50%;
+    }
+
     .article {
       width: 100%;
       padding: 32px 24px;
+
       video {
         max-width: 100%;
         height: auto;
       }
+
       .tekst {
         @include flex-box(space-around, stretch, column, flex);
+
         h1 {
-          padding: 24px 0 8px 0;
           font : {
             size: 2rem;
             weight: 900;
           }
+          padding: 24px 0 8px 0;
           color: $blue;
         }
       }
@@ -47,27 +63,38 @@
   }
   .container-sml {
     width: 40%;
+
+    @media only screen and (max-width: $breakpoint2) {
+      width: 50%;
+    }
+
     .snippets {
       @include flex-box(flex-start, stretch, column, flex);
       width: 90%;
       padding: 16px 0 16px 16px;
+
       .snippet {
         @include flex-box(flex-start, center, row, flex);
+        border : {
+          right: $highlight-border;
+          radius: 10px;
+        }
         width: 100%;
         margin: 16px 0;
         background-color: $cream;
-        border-right: $highlight-border;
-        border-radius: 10px;
         box-shadow: $standard-shadow;
+
         img {
           max-width: 35%;
           height: auto;
           border-right: $highlight-border;
         }
+
         .tekst {
           @include flex-box(flex-start, stretch, column, flex);
           width: 65%;
           padding-left: 16px;
+
           h1 {
             font : {
               size: 1.1rem;
@@ -75,6 +102,7 @@
             }
             color: $blue;
           }
+
           p {
             padding: 8px 0 16px 0;
             font-size: 0.85rem;
