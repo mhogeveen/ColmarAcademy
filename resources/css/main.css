@@ -1,22 +1,7 @@
+/* Importing helper scss files */
 /* Declaring variables */
 /* Declaring mixins */
-/* Styles applied to whole document */
-html {
-  font-size: 16px;
-  font-family: "Montserrat";
-  color: #191a1d; }
-
-body {
-  background-color: #cdd4ca; }
-
-img {
-  border-radius: 10px; }
-
-video {
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-  border-bottom: 3px solid #f2be54; }
-
+/* Importing section scss files */
 /* Styles applied to header section */
 #header-section {
   justify-content: space-between;
@@ -382,4 +367,21 @@ video {
       text-decoration: none;
       color: #ffffff; }
 
-/*# sourceMappingURL=test.css.map */
+/* Styles applied to the whole page */
+html {
+  font-size: 16px;
+  font-family: "Montserrat";
+  color: #191a1d; }
+
+body {
+  background-color: #cdd4ca; }
+
+img {
+  border-radius: 10px; }
+
+video {
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  border-bottom: 3px solid #f2be54; }
+
+/*# sourceMappingURL=main.css.map */

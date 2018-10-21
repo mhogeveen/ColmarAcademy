@@ -1,0 +1,36 @@
+/* Importing helper scss files */
+
+@import "helper/variables";
+@import "helper/mixins";
+@import "helper/placeholders";
+
+/* Importing section scss files */
+
+@import "sections/header";
+@import "sections/banner";
+@import "sections/news";
+@import "sections/courses";
+@import "sections/thesis";
+@import "sections/footer";
+
+/* Styles applied to the whole page */
+
+html {
+  font-size: 16px;
+  font-family: "Montserrat";
+  color: $black;
+}
+
+body {
+  background-color: $light-grey;
+}
+
+img {
+  border-radius: 10px;
+}
+
+video {
+  border-radius: 10px;
+  box-shadow: $standard-shadow;
+  border-bottom: $highlight-border;
+}

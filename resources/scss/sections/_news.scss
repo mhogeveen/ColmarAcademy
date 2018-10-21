@@ -1,0 +1,95 @@
+/* Styles applied to news section */
+
+#news-section {
+  @include flex-box(flex-start, stretch, row, flex);
+  @include space-from-top(relative, 64px);
+  width: 100%;
+  background-color: $light-blue;
+  .container-mdm {
+    @include flex-box(flex-start, stretch, row, flex);
+    width: 60%;
+    .article {
+      width: 100%;
+      padding: 32px 24px;
+      img {
+        max-width: 100%;
+        height: auto;
+        box-shadow: $standard-shadow;
+        border-bottom: $highlight-border;
+      }
+      .tekst {
+        @include flex-box(space-around, stretch, column, flex);
+        h1 {
+          padding: 32px 0 24px 0;
+          font : {
+            size: 2rem;
+            weight: 900;
+          }
+          color: $blue;
+        }
+        p {
+
+        }
+        span {
+          padding-top: 24px;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+  .container-sml {
+    width: 40%;
+    .snippets {
+      @include flex-box(flex-start, stretch, column, flex);
+      width: 90%;
+      padding: 16px 0 16px 16px;
+      .snippet {
+        @include flex-box(flex-start, center, row, flex);
+        width: 100%;
+        margin: 16px 0;
+        background-color: $cream;
+        border-radius: 10px;
+        border-right: $highlight-border;
+        box-shadow: $standard-shadow;
+        img {
+          border-right: $highlight-border;
+          max-width: 35%;
+          height: auto;
+        }
+        .tekst {
+          @include flex-box(flex-start, stretch, column, flex);
+          width: 65%;
+          padding-left: 16px;
+          h1 {
+            font : {
+              size: 1.1rem;
+              weight: 800;
+            }
+            color: $blue;
+          }
+          p {
+            padding: 8px 0 16px 0;
+            font-size: 0.85rem;
+          }
+          span {
+            a {
+              font : {
+                size: 0.85rem;
+                weight: 600;
+              }
+              color: $white;
+              background-color: $yellow;
+              border-radius: 10px;
+              padding: 0.5rem;
+              text-decoration: none;
+              transition: background-color 400ms linear, color 400ms linear;
+              &:hover {
+                color: $blue;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

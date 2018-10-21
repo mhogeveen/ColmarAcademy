@@ -1,0 +1,13 @@
+/* Declaring mixins */
+
+@mixin flex-box($justify-content: flex-start, $align-items: stretch, $flex-direction: row, $display: flex) {
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-direction: $flex-direction;
+  display: $display;
+}
+
+@mixin space-from-top($position, $top) {
+  position: $position;
+  top: $top;
+}

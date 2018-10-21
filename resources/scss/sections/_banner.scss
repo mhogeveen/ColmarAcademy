@@ -1,0 +1,56 @@
+/* Styles applied to banner section */
+
+#banner-section {
+  @include flex-box(flex-start, center);
+  @include space-from-top(relative, 64px);
+  width: 100%;
+  .container-mdm {
+    @include flex-box(flex-start, stretch, row, flex);
+    width: 60%;
+    .image {
+      width: 100%;
+      padding: 32px 24px;
+      img {
+        max-width: 100%;
+        height: auto;
+        box-shadow: $standard-shadow;
+        border-bottom: $highlight-border;
+      }
+    }
+  }
+  .container-sml {
+    width: 40%;
+    .info {
+      @include flex-box(space-around, stretch, column, flex);
+      max-width: 90%;
+      padding: 32px 0 32px 16px;
+      h1 {
+        width: 100%;
+        font : {
+          size: 2rem;
+          weight: 900;
+        }
+        color: $blue;
+      }
+      h2 {
+        width: 100%;
+        padding: 24px 0;
+      }
+      button {
+        text-align: center;
+        font-weight: 600;
+        padding: 0.5rem 0;
+        width: 60%;
+        border: none;
+        border-radius: 10px;
+        color: $white;
+        background-color: $yellow;
+        outline: none;
+        transition: background-color 400ms linear, color 400ms linear;
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+  }
+}
