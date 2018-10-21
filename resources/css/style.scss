@@ -1,0 +1,436 @@
+/* Declaring variables */
+
+$yellow: #f2be54;
+$light-grey: #cdd4ca;
+$light-blue: #87aeb4;
+$blue: #153e5c;
+$black: #191a1d;
+$cream: #f1f0e2;
+$white: #ffffff;
+$standard-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+$highlight-border: 3px solid $yellow;
+
+/* Declaring mixins */
+
+@mixin flex-box($justify-content: flex-start, $align-items: stretch, $flex-direction: row, $display: flex) {
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-direction: $flex-direction;
+  display: $display;
+}
+
+@mixin space-from-top($position, $top) {
+  position: $position;
+  top: $top;
+}
+
+/* Styles applied to whole document */
+
+html {
+  font-size: 16px;
+  font-family: "Montserrat";
+  color: $black;
+}
+
+body {
+  background-color: $light-grey;
+}
+
+img {
+  border-radius: 10px;
+}
+
+video {
+  border-radius: 10px;
+  box-shadow: $standard-shadow;
+  border-bottom: $highlight-border;
+}
+
+/* Styles applied to header section */
+
+#header-section {
+  @include flex-box(space-between, center);
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 64px;
+  background-color: $blue;
+  box-shadow: $standard-shadow;
+  .logo {
+    @include flex-box(flex-start, center);
+    height: 100%;
+    padding: 0 24px;
+    img {
+      position: relative;
+      top: 0.2rem;
+      height: 4rem;
+    }
+    .logo-word1 {
+      font : {
+        size: 1.5rem;
+        weight: 600;
+      }
+      color: $white;
+      position: relative;
+      bottom: 0.75rem;
+    }
+    .logo-word2 {
+      font : {
+        size: 1.5rem;
+        weight: 600;
+      }
+      color: $white;
+      position: relative;
+      top: 0.75rem;
+      right: 3rem;
+    }
+  }
+  .nav {
+    @include flex-box(flex-start, center);
+    height: 100%;
+    padding: 0 24px;
+    a {
+      padding: 1.625rem 8px;
+      text-decoration: none;
+      color: $white;
+      font : {
+        size: 0.75rem;
+        weight: 600;
+      }
+      background-color: inherit;
+      transition: background-color 400ms linear;
+      &:hover {
+        background-color: $yellow;
+      }
+    }
+  }
+}
+
+/* Styles applied to banner section */
+
+#banner-section {
+  @include flex-box(flex-start, center);
+  @include space-from-top(relative, 64px);
+  width: 100%;
+  .container-mdm {
+    @include flex-box(flex-start, stretch, row, flex);
+    width: 60%;
+    .image {
+      width: 100%;
+      padding: 32px 24px;
+      img {
+        max-width: 100%;
+        height: auto;
+        box-shadow: $standard-shadow;
+        border-bottom: $highlight-border;
+      }
+    }
+  }
+  .container-sml {
+    width: 40%;
+    .info {
+      @include flex-box(space-around, stretch, column, flex);
+      max-width: 90%;
+      padding: 32px 0 32px 16px;
+      h1 {
+        width: 100%;
+        font : {
+          size: 2rem;
+          weight: 900;
+        }
+        color: $blue;
+      }
+      h2 {
+        width: 100%;
+        padding: 24px 0;
+      }
+      button {
+        text-align: center;
+        font-weight: 600;
+        padding: 0.5rem 0;
+        width: 60%;
+        border: none;
+        border-radius: 10px;
+        color: $white;
+        background-color: $yellow;
+        outline: none;
+        transition: background-color 400ms linear, color 400ms linear;
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+  }
+}
+
+/* Styles applied to news section */
+
+#news-section {
+  @include flex-box(flex-start, stretch, row, flex);
+  @include space-from-top(relative, 64px);
+  width: 100%;
+  background-color: $light-blue;
+  .container-mdm {
+    @include flex-box(flex-start, stretch, row, flex);
+    width: 60%;
+    .article {
+      width: 100%;
+      padding: 32px 24px;
+      img {
+        max-width: 100%;
+        height: auto;
+        box-shadow: $standard-shadow;
+        border-bottom: $highlight-border;
+      }
+      .tekst {
+        @include flex-box(space-around, stretch, column, flex);
+        h1 {
+          padding: 32px 0 24px 0;
+          font : {
+            size: 2rem;
+            weight: 900;
+          }
+          color: $blue;
+        }
+        p {
+
+        }
+        span {
+          padding-top: 24px;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+  .container-sml {
+    width: 40%;
+    .snippets {
+      @include flex-box(flex-start, stretch, column, flex);
+      width: 90%;
+      padding: 16px 0 16px 16px;
+      .snippet {
+        @include flex-box(flex-start, center, row, flex);
+        width: 100%;
+        margin: 16px 0;
+        background-color: $cream;
+        border-radius: 10px;
+        border-right: $highlight-border;
+        box-shadow: $standard-shadow;
+        img {
+          border-right: $highlight-border;
+          max-width: 35%;
+          height: auto;
+        }
+        .tekst {
+          @include flex-box(flex-start, stretch, column, flex);
+          width: 65%;
+          padding-left: 16px;
+          h1 {
+            font : {
+              size: 1.1rem;
+              weight: 800;
+            }
+            color: $blue;
+          }
+          p {
+            padding: 8px 0 16px 0;
+            font-size: 0.85rem;
+          }
+          span {
+            a {
+              font : {
+                size: 0.85rem;
+                weight: 600;
+              }
+              color: $white;
+              background-color: $yellow;
+              border-radius: 10px;
+              padding: 0.5rem;
+              text-decoration: none;
+              transition: background-color 400ms linear, color 400ms linear;
+              &:hover {
+                color: $blue;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Style applied to courses section */
+
+#courses-section {
+  @include space-from-top(relative, 64px);
+  width: 100%;
+  .container-lrg {
+    @include flex-box(flex-start, stretch, column, flex);
+    padding: 32px 72px;
+    .title {
+      text : {
+        align: center;
+        decoration: underline;
+        decoration-color: $yellow;
+      }
+      font : {
+        size: 2rem;
+        weight: 900;
+      }
+      color: $blue;
+    }
+    .courses {
+      @include flex-box(flex-start, stretch, column, flex);
+      .courses-row {
+        @include flex-box(flex-start, stretch, row, flex);
+        width: 100%;
+        padding: 32px 0 0 0;
+        .course {
+          @include flex-box(flex-start, stretch, column, flex);
+          width: 33.33%;
+          background-color: $cream;
+          border-bottom: $highlight-border;
+          border-radius: 10px;
+          box-shadow: $standard-shadow;
+          &:nth-child(0n + 2) {
+            margin: auto 32px;
+          }
+          img {
+            width: 100%;
+            height: auto;
+            border-bottom: $highlight-border;
+          }
+          .tekst {
+            @include flex-box(flex-start, stretch, column, flex);
+            padding: 16px 16px 24px 16px;
+            h1 {
+              text-align: left;
+              padding: 0;
+              font : {
+                size: 1.5rem;
+                weight: 800;
+              }
+              color: $blue;
+            }
+            span {
+              padding: 8px 0;
+              font-size: 0.75rem;
+            }
+            p {
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Styles applied to thesis section */
+
+#thesis-section {
+  @include flex-box(flex-start, stretch, column, flex);
+  @include space-from-top(relative, 64px);
+  width: 100%;
+  background-color: $light-blue;
+  .title {
+    text : {
+      align: center;
+      decoration: underline;
+      decoration-color: $yellow;
+    }
+    font : {
+      size: 2rem;
+      weight: 900;
+    }
+    padding: 32px 0;
+    color: $blue;
+  }
+  .container-lrg {
+    @include flex-box(flex-start, stretch, row, flex);
+    width: 100%;
+  }
+  .container-mdm {
+    @include flex-box(flex-start, stretch, row, flex);
+    width: 60%;
+    .article {
+      width: 100%;
+      padding: 32px 24px;
+      video {
+        max-width: 100%;
+        height: auto;
+      }
+      .tekst {
+        @include flex-box(space-around, stretch, column, flex);
+        h1 {
+          padding: 24px 0 8px 0;
+          font : {
+            size: 2rem;
+            weight: 900;
+          }
+          color: $blue;
+        }
+      }
+    }
+  }
+  .container-sml {
+    width: 40%;
+    .snippets {
+      @include flex-box(flex-start, stretch, column, flex);
+      width: 90%;
+      padding: 16px 0 16px 16px;
+      .snippet {
+        @include flex-box(flex-start, center, row, flex);
+        width: 100%;
+        margin: 16px 0;
+        background-color: $cream;
+        border-right: $highlight-border;
+        border-radius: 10px;
+        box-shadow: $standard-shadow;
+        img {
+          max-width: 35%;
+          height: auto;
+          border-right: $highlight-border;
+        }
+        .tekst {
+          @include flex-box(flex-start, stretch, column, flex);
+          width: 65%;
+          padding-left: 16px;
+          h1 {
+            font : {
+              size: 1.1rem;
+              weight: 800;
+            }
+            color: $blue;
+          }
+          p {
+            padding: 8px 0 16px 0;
+            font-size: 0.85rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Styles applied to footer section */
+
+#footer-section {
+  @include flex-box(space-between, stretch, row, flex);
+  @include space-from-top(relative, 64px);
+  background-color: $blue;
+  span {
+    padding: 16px 0 32px 24px;
+    font-size: 0.8rem;
+    color: $white;
+  }
+  .bottom-nav {
+    padding: 16px 0 32px 0;
+    a {
+      padding: 0 16px 0 0;
+      font-size: 0.8rem;
+      text-decoration: none;
+      color: $white;
+    }
+  }
+}
