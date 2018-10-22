@@ -5,6 +5,10 @@
   @extend %space-from-top;
   width: 100%;
 
+  @media only screen and (max-width: $breakpoint4) {
+    @include flex-box(flex-start, center, column, flex);
+  }
+
   .container-mdm {
     @include flex-box(flex-start, stretch, row, flex);
     width: 60%;
@@ -13,9 +17,18 @@
       width: 50%;
     }
 
+    @media only screen and (max-width: $breakpoint4) {
+      width: 100%;
+    }
+
     .image {
       width: 100%;
       padding: 32px 24px;
+
+      @media only screen and (max-width: $breakpoint4) {
+        padding: 0;
+        margin-top: -5px;
+      }
 
       img {
         max-width: 100%;
@@ -33,10 +46,19 @@
       width: 50%;
     }
 
+    @media only screen and (max-width: $breakpoint4) {
+      width: 100%;
+    }
+
     .info {
       @include flex-box(space-around, stretch, column, flex);
       max-width: 90%;
       padding: 32px 0 32px 16px;
+
+      @media only screen and (max-width: $breakpoint4) {
+        max-width: 100%;
+        padding: 32px 16px;
+      }
 
       h1 {
         font : {
@@ -50,6 +72,10 @@
       h2 {
         width: 100%;
         padding: 24px 0;
+
+        @media only screen and (max-width: $breakpoint4) {
+          padding: 32px 0 24px 0;
+        }
       }
 
       button {
