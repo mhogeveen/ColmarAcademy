@@ -159,6 +159,10 @@
         height: auto;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         border-bottom: 3px solid #f2be54; }
+        @media only screen and (max-width: 650px) {
+          #banner-section .container-mdm .image img {
+            border-radius: 0;
+            border-bottom: none; } }
   #banner-section .container-sml {
     width: 40%; }
     @media only screen and (max-width: 850px) {
@@ -285,7 +289,7 @@
             border-bottom: 3px solid #f2be54;
             margin: 0; }
             #news-section .container-sml .snippets .snippet:nth-child(2n + 0) {
-              margin: 64px 0; } }
+              margin: 48px 0; } }
         @media only screen and (max-width: 650px) {
           #news-section .container-sml .snippets .snippet .normal {
             display: none; } }
@@ -349,6 +353,9 @@
     @media only screen and (max-width: 850px) {
       #courses-section .container-lrg {
         padding: 32px; } }
+    @media only screen and (max-width: 650px) {
+      #courses-section .container-lrg {
+        padding: 32px 16px; } }
     #courses-section .container-lrg .title {
       text-align: center;
       text-decoration: underline;
@@ -356,6 +363,9 @@
       font-size: 2rem;
       font-weight: 900;
       color: #153e5c; }
+      @media only screen and (max-width: 650px) {
+        #courses-section .container-lrg .title {
+          padding: 0 0 8px 0; } }
     #courses-section .container-lrg .courses {
       justify-content: flex-start;
       align-items: stretch;
@@ -368,6 +378,13 @@
         display: flex;
         width: 100%;
         padding: 32px 0 0 0; }
+        @media only screen and (max-width: 650px) {
+          #courses-section .container-lrg .courses .courses-row {
+            justify-content: flex-start;
+            align-items: stretch;
+            flex-direction: column;
+            display: flex;
+            padding: 0; } }
         #courses-section .container-lrg .courses .courses-row .course {
           justify-content: flex-start;
           align-items: stretch;
@@ -380,10 +397,20 @@
           box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); }
           #courses-section .container-lrg .courses .courses-row .course:nth-child(0n + 2) {
             margin: auto 32px; }
+            @media only screen and (max-width: 650px) {
+              #courses-section .container-lrg .courses .courses-row .course:nth-child(0n + 2) {
+                margin: 8px 0 0 0; } }
           #courses-section .container-lrg .courses .courses-row .course img {
             width: 100%;
             height: auto;
             border-bottom: 3px solid #f2be54; }
+            @media only screen and (max-width: 650px) {
+              #courses-section .container-lrg .courses .courses-row .course img {
+                display: none; } }
+          @media only screen and (max-width: 650px) {
+            #courses-section .container-lrg .courses .courses-row .course {
+              width: 100%;
+              margin: 8px 0 0 0; } }
           #courses-section .container-lrg .courses .courses-row .course .tekst {
             justify-content: flex-start;
             align-items: stretch;
@@ -399,8 +426,14 @@
             #courses-section .container-lrg .courses .courses-row .course .tekst span {
               padding: 8px 0;
               font-size: 0.75rem; }
+              @media only screen and (max-width: 650px) {
+                #courses-section .container-lrg .courses .courses-row .course .tekst span {
+                  display: none; } }
             #courses-section .container-lrg .courses .courses-row .course .tekst p {
               font-weight: 500; }
+              @media only screen and (max-width: 650px) {
+                #courses-section .container-lrg .courses .courses-row .course .tekst p {
+                  display: none; } }
 
 /* Styles applied to thesis section */
 #thesis-section {
@@ -436,17 +469,30 @@
     @media only screen and (max-width: 850px) {
       #thesis-section .container-mdm {
         width: 50%; } }
+    @media only screen and (max-width: 650px) {
+      #thesis-section .container-mdm {
+        width: 100%; } }
     #thesis-section .container-mdm .article {
       width: 100%;
       padding: 32px 24px; }
+      @media only screen and (max-width: 650px) {
+        #thesis-section .container-mdm .article {
+          padding: 16px 0 24px 0; } }
       #thesis-section .container-mdm .article video {
         max-width: 100%;
         height: auto; }
+        @media only screen and (max-width: 650px) {
+          #thesis-section .container-mdm .article video {
+            border-radius: 0;
+            border-bottom: none; } }
       #thesis-section .container-mdm .article .tekst {
         justify-content: space-around;
         align-items: stretch;
         flex-direction: column;
         display: flex; }
+        @media only screen and (max-width: 650px) {
+          #thesis-section .container-mdm .article .tekst {
+            display: none; } }
         #thesis-section .container-mdm .article .tekst h1 {
           font-size: 2rem;
           font-weight: 900;
@@ -457,6 +503,9 @@
     @media only screen and (max-width: 850px) {
       #thesis-section .container-sml {
         width: 50%; } }
+    @media only screen and (max-width: 650px) {
+      #thesis-section .container-sml {
+        display: none; } }
     #thesis-section .container-sml .snippets {
       justify-content: flex-start;
       align-items: stretch;
@@ -505,8 +554,14 @@
     padding: 16px 0 32px 24px;
     font-size: 0.8rem;
     color: #ffffff; }
+    @media only screen and (max-width: 650px) {
+      #footer-section span {
+        padding: 16px; } }
   #footer-section .bottom-nav {
     padding: 16px 0 32px 0; }
+    @media only screen and (max-width: 650px) {
+      #footer-section .bottom-nav {
+        display: none; } }
     #footer-section .bottom-nav a {
       padding: 0 16px 0 0;
       font-size: 0.8rem;

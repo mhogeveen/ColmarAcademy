@@ -9,11 +9,19 @@
     padding: 16px 0 32px 24px;
     font-size: 0.8rem;
     color: $white;
+
+    @media only screen and (max-width: $breakpoint4) {
+      padding: 16px;
+    }
   }
 
   .bottom-nav {
     padding: 16px 0 32px 0;
-    
+
+    @media only screen and (max-width: $breakpoint4) {
+      display: none;
+    }
+
     a {
       padding: 0 16px 0 0;
       font-size: 0.8rem;

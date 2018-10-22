@@ -12,6 +12,10 @@
       padding: 32px;
     }
 
+    @media only screen and (max-width: $breakpoint4) {
+      padding: 32px 16px;
+    }
+
     .title {
       text : {
         align: center;
@@ -24,6 +28,10 @@
         weight: 900;
       }
       color: $blue;
+
+      @media only screen and (max-width: $breakpoint4) {
+        padding: 0 0 8px 0;
+      }
     }
 
     .courses {
@@ -34,6 +42,11 @@
         width: 100%;
         padding: 32px 0 0 0;
 
+        @media only screen and (max-width: $breakpoint4) {
+          @include flex-box(flex-start, stretch, column, flex);
+          padding: 0;
+        }
+
         .course {
           @include flex-box(flex-start, stretch, column, flex);
           border : {
@@ -43,14 +56,28 @@
           width: 33.33%;
           background-color: $cream;
           box-shadow: $standard-shadow;
+
           &:nth-child(0n + 2) {
             margin: auto 32px;
+
+            @media only screen and (max-width: $breakpoint4) {
+              margin: 8px 0 0 0;
+            }
           }
 
           img {
             width: 100%;
             height: auto;
             border-bottom: $highlight-border;
+
+            @media only screen and (max-width: $breakpoint4) {
+              display: none;
+            }
+          }
+
+          @media only screen and (max-width: $breakpoint4) {
+            width: 100%;
+            margin: 8px 0 0 0;
           }
 
           .tekst {
@@ -70,10 +97,18 @@
             span {
               padding: 8px 0;
               font-size: 0.75rem;
+
+              @media only screen and (max-width: $breakpoint4) {
+                display: none;
+              }
             }
 
             p {
               font-weight: 500;
+
+              @media only screen and (max-width: $breakpoint4) {
+                display: none;
+              }
             }
           }
         }

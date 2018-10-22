@@ -35,6 +35,13 @@
         height: auto;
         box-shadow: $standard-shadow;
         border-bottom: $highlight-border;
+
+        @media only screen and (max-width: $breakpoint4) {
+          border : {
+            radius: 0;
+            bottom: none;
+          }
+        }
       }
     }
   }
