@@ -62,7 +62,7 @@
         width: 100%;
         margin: 16px 0;
         background-color: $cream;
-        border-radius: 10px;
+        border-radius: $standard-radius;
         border-right: $highlight-border;
         box-shadow: $standard-shadow;
 
@@ -103,7 +103,7 @@
               }
               color: $white;
               background-color: $yellow;
-              border-radius: 10px;
+              border-radius: $standard-radius;
               padding: 0.5rem;
               text-decoration: none;
               transition: background-color 400ms linear, color 400ms linear;

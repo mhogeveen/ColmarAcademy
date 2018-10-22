@@ -17,7 +17,7 @@
 
 html {
   font-size: 16px;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   color: $black;
 }
 
@@ -26,11 +26,11 @@ body {
 }
 
 img {
-  border-radius: 10px;
+  border-radius: $standard-radius;
 }
 
 video {
-  border-radius: 10px;
+  border-radius: $standard-radius;
   box-shadow: $standard-shadow;
   border-bottom: $highlight-border;
 }

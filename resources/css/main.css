@@ -37,6 +37,9 @@
       color: #ffffff;
       position: relative;
       bottom: 0.75rem; }
+      @media only screen and (orientation: portrait) {
+        #header-section .logo .logo-word1 {
+          display: none; } }
     #header-section .logo .logo-word2 {
       font-size: 1.5rem;
       font-weight: 600;
@@ -44,6 +47,60 @@
       position: relative;
       top: 0.75rem;
       right: 3rem; }
+      @media only screen and (orientation: portrait) {
+        #header-section .logo .logo-word2 {
+          display: none; } }
+  #header-section .campus {
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    height: 100%;
+    padding: 0 24px; }
+    #header-section .campus img {
+      position: relative;
+      top: 0.2rem;
+      height: 2.5rem; }
+    @media only screen and (orientation: landscape) {
+      #header-section .campus {
+        display: none; } }
+    @media only screen and (orientation: portrait) {
+      #header-section .campus {
+        display: inline-flex; } }
+  #header-section .online {
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    height: 100%;
+    padding: 0 24px; }
+    #header-section .online img {
+      position: relative;
+      top: 0.2rem;
+      height: 2.5rem; }
+    @media only screen and (orientation: landscape) {
+      #header-section .online {
+        display: none; } }
+    @media only screen and (orientation: portrait) {
+      #header-section .online {
+        display: inline-flex; } }
+  #header-section .login {
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    height: 100%;
+    padding: 0 24px; }
+    #header-section .login img {
+      position: relative;
+      top: 0.2rem;
+      height: 2.5rem; }
+    @media only screen and (orientation: landscape) {
+      #header-section .login {
+        display: none; } }
+    @media only screen and (orientation: portrait) {
+      #header-section .login {
+        display: inline-flex; } }
   #header-section .nav {
     justify-content: flex-start;
     align-items: center;
@@ -61,6 +118,9 @@
       transition: background-color 400ms linear; }
       #header-section .nav a:hover {
         background-color: #f2be54; }
+    @media only screen and (orientation: portrait) {
+      #header-section .nav {
+        display: none; } }
 
 /* Styles applied to banner section */
 #banner-section {
@@ -112,7 +172,7 @@
         padding: 0.5rem 0;
         width: 60%;
         border: none;
-        border-radius: 10px;
+        border-radius: 5px;
         color: #ffffff;
         background-color: #f2be54;
         outline: none;
@@ -178,7 +238,7 @@
         width: 100%;
         margin: 16px 0;
         background-color: #f1f0e2;
-        border-radius: 10px;
+        border-radius: 5px;
         border-right: 3px solid #f2be54;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); }
         #news-section .container-sml .snippets .snippet img {
@@ -207,7 +267,7 @@
             font-weight: 600;
             color: #ffffff;
             background-color: #f2be54;
-            border-radius: 10px;
+            border-radius: 5px;
             padding: 0.5rem;
             text-decoration: none;
             transition: background-color 400ms linear, color 400ms linear; }
@@ -255,7 +315,7 @@
           flex-direction: column;
           display: flex;
           border-bottom: 3px solid #f2be54;
-          border-radius: 10px;
+          border-radius: 5px;
           width: 33.33%;
           background-color: #f1f0e2;
           box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); }
@@ -351,7 +411,7 @@
         flex-direction: row;
         display: flex;
         border-right: 3px solid #f2be54;
-        border-radius: 10px;
+        border-radius: 5px;
         width: 100%;
         margin: 16px 0;
         background-color: #f1f0e2;
@@ -397,17 +457,17 @@
 /* Styles applied to the whole page */
 html {
   font-size: 16px;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   color: #191a1d; }
 
 body {
   background-color: #cdd4ca; }
 
 img {
-  border-radius: 10px; }
+  border-radius: 5px; }
 
 video {
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   border-bottom: 3px solid #f2be54; }
 

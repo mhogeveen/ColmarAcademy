@@ -29,6 +29,12 @@
       color: $white;
       position: relative;
       bottom: 0.75rem;
+
+
+
+      @media only screen and (orientation: portrait) {
+        display: none;
+      }
     }
 
     .logo-word2 {
@@ -40,6 +46,72 @@
       position: relative;
       top: 0.75rem;
       right: 3rem;
+
+
+
+      @media only screen and (orientation: portrait) {
+        display: none;
+      }
+    }
+  }
+
+  .campus {
+    @include flex-box(flex-start, center);
+    height: 100%;
+    padding: 0 24px;
+
+    img {
+      position: relative;
+      top: 0.2rem;
+      height: 2.5rem;
+    }
+
+    @media only screen and (orientation: landscape) {
+      display: none;
+    }
+
+    @media only screen and (orientation: portrait) {
+      display: inline-flex;
+    }
+  }
+
+  .online {
+    @include flex-box(flex-start, center);
+    height: 100%;
+    padding: 0 24px;
+
+    img {
+      position: relative;
+      top: 0.2rem;
+      height: 2.5rem;
+    }
+
+    @media only screen and (orientation: landscape) {
+      display: none;
+    }
+
+    @media only screen and (orientation: portrait) {
+      display: inline-flex;
+    }
+  }
+
+  .login {
+    @include flex-box(flex-start, center);
+    height: 100%;
+    padding: 0 24px;
+
+    img {
+      position: relative;
+      top: 0.2rem;
+      height: 2.5rem;
+    }
+
+    @media only screen and (orientation: landscape) {
+      display: none;
+    }
+
+    @media only screen and (orientation: portrait) {
+      display: inline-flex;
     }
   }
 
@@ -58,10 +130,16 @@
       color: $white;
       background-color: inherit;
       transition: background-color 400ms linear;
-      
+
       &:hover {
         background-color: $yellow;
       }
+    }
+
+
+
+    @media only screen and (orientation: portrait) {
+      display: none;
     }
   }
 }

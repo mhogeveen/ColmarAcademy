@@ -38,7 +38,7 @@
           @include flex-box(flex-start, stretch, column, flex);
           border : {
             bottom: $highlight-border;
-            radius: 10px;
+            radius: $standard-radius;
           }
           width: 33.33%;
           background-color: $cream;
