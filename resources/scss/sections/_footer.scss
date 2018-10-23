@@ -5,6 +5,10 @@
   @extend %space-from-top;
   background-color: $blue;
 
+  @media only screen and (max-width: $breakpoint5) {
+    @include flex-box(flex-start, center, column, flex);
+  }
+
   span {
     padding: 16px 0 32px 24px;
     font-size: 0.8rem;
@@ -12,6 +16,25 @@
 
     @media only screen and (max-width: $breakpoint4) {
       padding: 16px;
+    }
+  }
+
+  .social-media {
+    padding: 16px 0;
+
+    @media only screen and (max-width: $breakpoint5) {
+      padding: 0 0 16px 0;
+    }
+
+    a {
+      i {
+        padding: 0 16px 0 0;
+        color: $white;
+
+        @media only screen and (max-width: $breakpoint5) {
+          padding: 0 8px;
+        }
+      }
     }
   }
 

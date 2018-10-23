@@ -17,12 +17,8 @@
       size: 2rem;
       weight: 900;
     }
-    padding: 32px 0;
+    padding: 32px 0 0 0;
     color: $blue;
-
-    @media only screen and (max-width: $breakpoint2) {
-      padding: 32px 0 0 0;
-    }
   }
 
   .container-lrg {

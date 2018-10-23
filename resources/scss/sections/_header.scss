@@ -21,6 +21,14 @@
       height: 4rem;
     }
 
+    @media only screen and (max-width: $breakpoint3) {
+      transition: background-color 400ms linear;
+
+      &:hover {
+        background-color: $yellow;
+      }
+    }
+
     .logo-word1 {
       font : {
         size: 1.5rem;
@@ -68,6 +76,11 @@
 
     @media only screen and (max-width: $breakpoint3) {
       display: inline-flex;
+      transition: background-color 400ms linear;
+
+      &:hover {
+        background-color: $yellow;
+      }
     }
   }
 
@@ -88,6 +101,11 @@
 
     @media only screen and (max-width: $breakpoint3) {
       display: inline-flex;
+      transition: background-color 400ms linear;
+
+      &:hover {
+        background-color: $yellow;
+      }
     }
   }
 
@@ -108,6 +126,11 @@
 
     @media only screen and (max-width: $breakpoint3) {
       display: inline-flex;
+      transition: background-color 400ms linear;
+
+      &:hover {
+        background-color: $yellow;
+      }
     }
   }
 

@@ -81,7 +81,7 @@
         box-shadow: $standard-shadow;
 
         @media only screen and (max-width: $breakpoint4) {
-          @include flex-box(flex-start, center, column, flex);
+          @include flex-box(flex-start, stretch, column, flex);
           border-right: none;
           border-bottom: $highlight-border;
           margin: 0;
@@ -120,7 +120,8 @@
           padding-left: 16px;
 
           @media only screen and (max-width: $breakpoint4) {
-            padding: 16px 0;
+            padding: 16px;
+            width: default;
           }
 
           h1 {
